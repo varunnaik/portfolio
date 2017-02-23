@@ -10,8 +10,8 @@ function Portfolio() {
 var hypnos = function() {
      // get the canvas
      var canvas = document.createElement('canvas');
-     canvas.style = "display: block; height: " + window.innerHeight + "px; width: " + window.innerWidth + "px; position: absolute; top: 0; left: 0;";
-     $('#aslider div')[0].append(canvas);
+     canvas.style = "display: block; height: " + window.innerHeight + "px; width: " + window.innerWidth + "px; z-index: 5; position: absolute; top: 0; left: 0;";
+     $('#contact div')[0].append(canvas);
 
      (function() {
 				
@@ -20,7 +20,7 @@ var hypnos = function() {
 					width = window.innerWidth * 0.7,
 					height = window.innerHeight * 0.7,
 
-					radius = Math.min( width, height ) * 0.35,
+					radius = Math.min( width, height ) * 0.4,
 
 					// Number of layers
 					quality = 180,
@@ -39,7 +39,7 @@ var hypnos = function() {
 					for( var i = 0; i < quality; i++ ) {
 						layers.push({
 							x: width/2 + Math.sin( i / quality * 2 * Math.PI ) * ( radius - layerSize ),
-							y: height/2 + Math.cos( i / quality * 2 * Math.PI ) * ( radius - layerSize ),
+							y: height/2 + Math.cos( i / quality * 2 * Math.PI ) * ( radius - layerSize )-30,
 							r: ( i / quality ) * Math.PI
 						});
 					}
@@ -183,6 +183,8 @@ var hypnos = function() {
 	particlesJS.load('particle-bg', 'js/particlesjs-config.json', function() {
 		console.log('callback - particles.js config loaded');
 	});
+
+	hypnos();
 
  };
     

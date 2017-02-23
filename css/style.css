@@ -11,13 +11,17 @@ section {
 
 .text {
     position: absolute;
-    top: 45%;
+    top: 44%;
     width: 100%;
     z-index: 5;
 }
 
 #lstext {
-    top: 25%;
+    top: 18%;
+}
+#contact-text {
+    top:82%;
+    z-index: 6;
 }
 #particle-bg {
     z-index: 4;
@@ -72,6 +76,16 @@ background: linear-gradient(to left, #2C3E50 , #4CA1AF); /* W3C, IE 10+/ Edge, F
 background: #d53369; /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #d53369 , #cbad6d); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #d53369 , #cbad6d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+}
+
+#contact {
+
+
+
+background: #093028; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #093028 , #237A57); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #093028 , #237A57); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         
 }
 h1 {
