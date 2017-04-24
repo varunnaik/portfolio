@@ -292,8 +292,8 @@ aside p {
 }
 
 #otherprojects-desc {
-    height: 85%;
-    bottom: -85%;
+    height: 95% !important;
+    bottom: -95%;
 }
 aside div {
     margin: 10px;
