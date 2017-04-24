@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    var portfolio = Portfolio();
+var portfolio = Portfolio();
+$(document).ready(function() {    
     portfolio.init();
        
 });
@@ -176,7 +176,10 @@ var hypnos = function() {
 
     $('#c').fullpage({
         sectionSelector: 'section',
-        scrollBar: true
+        scrollBar: true,
+        onLeave: function() {
+            portfolio.closeAllSlides();
+        }
     });
 
         
@@ -187,8 +190,21 @@ var hypnos = function() {
 	hypnos();
 
  };
+ 
+ var openSlide = function(slideId) {
+    $('#'+slideId).addClass('open');     
+ }
+ var closeSlide = function(slideId) {
+    $('#'+slideId).removeClass('open');    
+ }
+ var closeAllSlides = function() {
+    $('aside').removeClass('open');
+ }
     
  return {
-    init: init,     
+    init: init,
+    openSlide: openSlide,
+    closeSlide: closeSlide,
+    closeAllSlides: closeAllSlides     
  }
 }

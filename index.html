@@ -2,68 +2,214 @@
 <html>
 	<head>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet"> 
+
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/jquery.fullPage.css" />
+
 	</head>
 	<body>
 		<div id="c">
 		<div id="particle-bg"></div>
-		<section id="intro" style="height: 100%; width: 100%" data-anchor="Introduction">
+		<section id="intro" style="height: 100%; width: 100%" data-anchor="Introduction"><!-- style to prevent fouc -->
 			<div class="text" id="introtext">
 				<h1>Varun Naik</h1>
-				<h4>Web projects showcase</h4>
-                <h5>Scroll down for projects.</h5>
-				<a href="#Aslider" class="arrow animated bounce"></a>
-			</div>
+				<h4>Fullstack web developer</h4>
+                <h4 id="projects-title">Web projects showcase</h4>
+                <a href="#Aslider" class="arrow"><span></span>Explore</a>
+			</div>            
 		</section>
 		<section id="aslider"  data-anchor="Aslider">
 			<div class="text">
 				<h1>A-slider</h1>
-				<h4><a href="https://github.com/varunnaik/A-Slider" target="_blank">A Javscript image slider plugin</a></h4>
-				<a href="#Linksidebar" class="arrow animated bounce"></a>
+                <h4><a href="javascript:portfolio.openSlide('aslider-desc')" data-toggle="modal" data-target="#aslider-modal">A Javascript image slider</a></h4>
+				<a href="#Linksidebar" class="arrow"><span></span></a>
 			</div>
+            <aside id="aslider-desc">
+                <div>
+                    <h3>A Slider</h3>
+                    <p>ASlider is a responsive image slider that favours convention over configuration. It has no dependencies, not even JQuery.</p>
+                    <p>ASlider supports per-slide audio as well as having multiple sliders per page.</p>
+                    <p class="desc-center">View project on Github: <a href="http://varunnaik.github.io/A-Slider/" target="_blank">ASlider responsive image slider</a></p>
+                    <a href="javascript:portfolio.closeSlide('aslider-desc')" class="close-button">Close</a>
+                </div>
+            </aside>
 		</section>
 		<section id="linksidebar" data-anchor="Linksidebar">
-			<div id="particles">
 			<div class="text">
 				<h1>Linksidebar</h1>
 				<!-- http://dragdropsite.github.io/waterpipe.js/ -->
-				<h4><a href="https://github.com/varunnaik/LinkSidebar" target="_blank">Link explorer extension for Firefox</a></h4>
-				<a href="#GameOfLife" class="arrow animated bounce"></a>
+				<h4><a href="javascript:portfolio.openSlide('linksidebar-desc')">Link explorer extension for Firefox</a></h4>
+				<a href="#GameOfLife" class="arrow"><span></span></a>
 			</div>
-			</div>
+            <aside id="linksidebar-desc">
+                <div>
+                    <h3>Linksidebar</h3>
+                    <p>Linksidebar is a native Firefox extension built to view, search, copy and test all links in a webpage.</p>
+                    <p>Linksidebar is a powerful tool useful for frontend developers, data miners, and people maintaining websites.</p>
+                    <p class="desc-center">View project on Github: <a href="https://github.com/varunnaik/LinkSidebar" target="_blank">Linksidebar on Github</a></p>
+                    <a href="javascript:portfolio.closeSlide('linksidebar-desc')" class="close-button">Close</a>
+                </div>
+            </aside>
 		</section>
 		<section id="gol" data-anchor="GameOfLife">
 			<div class="text">
 				<h1>Game of Life</h1>
-				<h4><a href="https://github.com/varunnaik/Gameoflife.js" target="_blank">Javascript Game of Life implementation</a></h4>
-				<a href="#FallingSnow" class="arrow animated bounce"></a>
+				<h4><a href="javascript:portfolio.openSlide('gameoflife-desc')">Javascript Game of Life implementation</a></h4>
+				<a href="#FallingSnow" class="arrow"><span></span></a>
 			</div>
+            <aside id="gameoflife-desc">
+                <div>
+                    <h3>Game of Life</h3>
+                    <p>An implementation of John Conway's Game of Life, a game of cellular automata and a cornerstone of computer simulations.</p>
+                    <p>Implemented in HTML5 and Javascript.</p>
+                    <p class="desc-center">View project on Github: <a href="https://varunnaik.github.io/Gameoflife.js/" target="_blank">The Game of life on Github</a></p>
+                    <a href="javascript:portfolio.closeSlide('gameoflife-desc')" class="close-button">Close</a>
+                </div>
+            </aside>
 		</section>
 		<section id="snow" data-anchor="FallingSnow">
 			<div id="bubble-bg"></div>
 			<div class="text">
 				<h1>Falling Snow</h1>
-				<h4><a href="https://github.com/varunnaik/fallingSnow" target="_blank">Falling snow generator plugin</a></h4>
-				<a href="#OtherStuff" class="arrow animated bounce"></a>
+				<h4><a href="javascript:portfolio.openSlide('fallingsnow-desc')">Falling snow generator plugin</a></h4>
+				<a href="#OtherStuff" class="arrow"><span></span></a>
 			</div>
+            <aside id="fallingsnow-desc">
+                <div>
+                    <h3>Falling Snow Plugin</h3>
+                    <p>Add this javascript to any webpage to get a falling snow effect across the entire page or across parts of the page.</p>
+                    <p>Easy to use, fully responsive, with no external dependencies (not even Jquery). The generator page below allows you to configure the snow for your page.</p>
+                    <p class="desc-center">View Project on Github: <a href="http://varunnaik.github.io/fallingSnow/" target="_blank">Falling snow generator</a></p>
+                    <a href="javascript:portfolio.closeSlide('fallingsnow-desc')" class="close-button">Close</a>
+                </div>
+            </aside>
 		</section>
 		<section id="other-stuff" data-anchor="OtherStuff">
-			<div class="text" id="lstext">
+			<div class="text">
 				<h1>Other Projects</h1>
-				<h4><a href="https://github.com/varunnaik/threejs" target="_blank">ThreeJS experiments</a></h4>
-				<h4><a href="https://github.com/varunnaik/load-test" target="_blank">Website load tester</a></h4>
-				<h4><a href="https://github.com/varunnaik/PaletteViewer" target="_blank">Palette picker</a></h4>
-                <a href="#Contact" class="arrow animated bounce"></a>
+				<h4><a href="javascript:portfolio.openSlide('otherprojects-desc')">Other small projects and experiments</a></h4>
+                <a href="#Contact" class="arrow"><span></span></a>
 			</div>
+            <aside id="otherprojects-desc">
+                <div>
+                    <h3>ThreeJS experiments</h3>
+                    <p>This is a set of experiments I worked on when learning WebGL. Check the index page below for the experiments.</p>
+                    <p class="desc-center">View project on Github: <a href="http://varunnaik.github.io/threejs/" target="_blank">ThreeJS experiments</a></p>
+                    <hr />
+                    <h3>Load Tester</h3>
+                    <p>A small tool to load test servers. This was developed to stress test a server running on a low-powered embedded device.</p>
+                    <p class="desc-center">View project on Github: <a href="https://github.com/varunnaik/load-test" target="_blank">Load Tester</a></p>
+                    <hr />
+                    <h3>Palette Picker</h3>
+                    <p>Tiny utility for programmers to select a colour palette list. Mainly useful for frontend developers.</p>
+                    <p class="desc-center">View project on Github: <a href="https://varunnaik.github.io/PaletteViewer/" target="_blank">Palette Picker</a></p>
+                    <a href="javascript:portfolio.closeSlide('otherprojects-desc')" class="close-button">Close</a>
+                </div>
+            </aside>
 		</section>
 		<section id="contact" data-anchor="Contact">
 			<div class="text" id="contact-text">
-				<h4>Get in touch on <a href="https://www.linkedin.com/in/vnaik/" target="_blank">LinkedIn</a></h4>
+				<h4>Get in touch on <a href="https://www.linkedin.com/in/vnaik/">LinkedIn</a></h4>
 			</div>
 		</section>
-		</div>
+		
+        
+        <!-- Aslider Modal -->
+        <div class="modal fade" id="aslider-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Snowflakes Modal -->
+        <div class="modal fade" id="snowflake-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>     
+        
+        <!-- Linksidebar Modal -->
+        <div class="modal fade" id="linksidebar-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+        <!-- Game of life Modal -->
+        <div class="modal fade" id="gameoflife-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Misc. Modal -->
+        <div class="modal fade" id="misc-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>           
 
+    </div>
 
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script src="js/jquery.fullPage.min.js"></script>
@@ -72,6 +218,3 @@
 	</body>
 </html>
 
-<!-- TODO:
-Incorporate new effects
--->
